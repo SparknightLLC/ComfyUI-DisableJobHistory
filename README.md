@@ -1,2 +1,15 @@
 # ComfyUI-DisableJobHistory
-Automatically prunes job entries in ComfyUI to improve performance.
+
+This is a simple extension for [ComfyUI](https://github.com/comfyanonymous/ComfyUI) that automatically removes an item from the job queue after the job is finished. No custom nodes are required.
+
+### Installation
+
+You can clone this repo into `comfyui/custom_nodes/ComfyUI-DisableJobHistory` or search for "Disable Job History" in the ComfyUI Manager.
+
+### Rationale
+
+When using large workflows (100+ nodes), I noticed that every time I queued up a job, there was a significant delay before start of execution. On the first run, the delay was 0.15s. By the 10th run, it was maybe 1s. It can quickly grow to 3 or 4 seconds, which is very annoying if you're trying to rapidly test prompts.
+
+I don't know if this is a bug or intended behavior, but ComfyUI seems to parse the entire job history in some way at the outset of every job.
+
+With this extension, I can use ComfyUI for hours on end and every task will start immediately. You may still experience some slowdown if your `temp` folder is massive, but that's another matter.
