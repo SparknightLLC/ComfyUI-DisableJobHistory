@@ -9,7 +9,7 @@ You can clone this repo into `comfyui/custom_nodes/ComfyUI-DisableJobHistory` or
 ### Rationale
 
 > [!IMPORTANT]  
-> Per #1, the Comfy Frontend team fixed the issue described below. This extension is still useful if you want to auto-clear your job history, but it may no longer provide performance gains for most users. Just make sure your Frontend is updated to v1.34.4 or newer!
+> Per [#1](https://github.com/SparknightLLC/ComfyUI-DisableJobHistory/issues/1), the Comfy Frontend team fixed the issue described below. This extension is still useful if you want to auto-clear your job history, but it may no longer provide performance gains for most users. Just make sure your Frontend is updated to v1.34.4 or newer!
 
 When using large workflows (100+ nodes), I noticed that every time I queued up a job, there was a significant delay before start of execution. On the first run, the delay was 0.15s. By the 10th run, it was maybe 1s. It can quickly grow to 3 or 4 seconds, which is very annoying if you're trying to rapidly test prompts.
 
